@@ -1,0 +1,120 @@
+# # Revisão de conteúdo:
+# # print= "Função de saída de dados para o console"
+# # input = "Função de entrada de dados do usuário via teclado"
+# # if =  "Estrutura de decisão para executar código condicionalmente"
+# #     elif = "Combinação de else + if para verificar múltiplas condições"
+# #     else = "Parte opcional de um if que executa código quando a condição do if é falsa"
+# # for = "Laço de repetição para iterar sobre uma sequência  de elementos"
+# #     while = "Laço de repetição para executar o código enquanto uma condição for verdadeira"
+# #     operadores matemáticos: +, -, /, //, %, **
+# # operadores de comparação: ==, !=, >, <, >=, <=
+# # variavel = "Exemplo de variável para armazenar dados"
+# # print("variavel")
+
+# # # Exemplo 1: com print e input
+# # nome = input("Digite seu nome")
+# # print(f"Olá, {nome}! Bem-vindo à aula de Python para desenvolvimento de Sistemas")
+
+# #Exemplo 2: com if, elif e else 
+# # nota = float(input("Digite a nota do aluno:"))
+# # if nota >= 7:
+# #     print("Aluno aprovado!")
+# # elif nota >= 5:
+# #     print("Aluno em recuperação")
+# # else:
+# #     print("Aluno reprovado")
+
+# # Exemplo 3: com for 
+# # materiais = ["metal", "plastico", "vidro"]
+# # for material in materiais:
+# #     print(f"Processando material: {material}.")
+# #     print(f"Material {material} processado com sucesso!")
+# # print("Fim do processamento de materiais")
+
+# #2. O Laço while (Repetições Indeterminadas)
+# #Usa o while quando você não sabe quando vai parar. Ele depende de uma condição (como um sensor de segurança ou um botão de emergência).
+# #Exemplo: Monitor de Temperatura (Loop Infinito Controlado)
+# #Repete enquanto a temperatura estiver segura
+# # import time 
+# # temperatura = 25 
+# # while temperatura < 40:
+# #     print(f"Temperatura atual: {temperatura}°C. Sistema operando...")
+# #     time.sleep(3)
+# #     temperatura =+ 3 #Simulando o aquecimento da máquina
+# # print("ALERTA! A temperatura atingiu o limite. Desligando o motor...")
+
+# # Lista de temperatura lidas pelo sensor por minuto
+# # leituras = [70, 75, 82, 98, 110, 85, 80]
+# # for temp in leituras:
+# #     while temp > 100:
+# #         print(f"CRÍTICO: {temp}°C. detectado! Acionando parada de emergência.")
+# #         break  #O loop para aqui e NÃO lê os próximos valores (85 e 80)
+# #     print("Temperatura está em {temp}°C. Operação normal")
+# # print("Sistema desligado. Aguardando manutenção")
+
+# #Produção de peças com controle de material usando continue
+# # materiais = ["metal", "metal", "plastico", "metal","vidro","metal",]
+# # for peca in materiais:
+# #     if peca != "metal": 
+# #         print(f"Aviso: Peça de {peca} detectada. Desviando para descarte...")
+# #         continue #Pula o restante do código abaixo e vai para a próxima peça
+# #     #Este código só roda se a peça for de metal 
+# #     print(f"Processando peça de {peca}. Furando e polindo...")
+# # print("Fim do lote de produção.")
+
+# #Exercício 1
+# #Tente criar um código que conte de 1 a 10, mas use o continue para não imprimir o número 5 (simulando uma falha de sensor específica no item 5)
+# # numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+# # for numbers in range ("5"): 
+# #     print ("Falha no sensor 5")
+# # for sensor in range (1,11):
+# #      if sensor == 5: 
+# #           print(f"Sensor {sensor} com falha")
+# #      print(f"Sensor {sensor} sem falha")
+# # print("Fim:)")
+
+# # Exercício 2 
+# #Simule um semáforo com parada para cada cor. Determine um tempo que deseja para que quando mudar para tal cor ele represente uma pausa para 
+# # cada cor. Use o continue para pular a cor amarela (simulando um semáforo com defeito que não acende a luz amarela)
+# # import time
+# # cores = ["Verde", "Amarelo","Vermelho"]
+# # for cor in cores:
+# #     if cor == "Amarelo":
+# #          print(f"Sinal está com defeito, pulando a cor {cor}...")
+# #          continue #Pula a cor amarela 
+# #     print(f"Semáforo na cor {cor}. Parando por 3 segundos...")
+# #     time.sleep (3) #Simula a pausa para cada cor 
+# # print("Fim do ciclo do semáforo.")
+
+# #Exercício 3 - Soma de Cargas de Energia (for)
+# #Uma fabrica tem 5 máquinas. Peça ao usuário (via input dentro do loop) o consumo em kWh de cada uma das máquinas. Ao final do loop, o programa
+# deve exibir o consumo total da fábrica.
+
+# total = 0 
+# for maq in range (1,6):
+#     consumo = float (input(f"Digite o consumo em kWh da máquina {maq}: "))
+#     total += consumo #Acumula o consumo total
+# print(f"O consumo total sa fábrica é de {total} kWh")
+
+#Exercício 4 - Identificador de Peças  Defeituosas (for + if)
+#Percorra uma lista de medidas de peças:
+#Medidas = [50.1, 49.8, 52.0, 48.5].
+#O padrão de qualidade aceita apenas peças com exatamente 50.0 ou mais.
+#Use um for para ler a lista e, para cada peça diga se ela está "Aprovada" ou "Rejeitada".
+
+# medidas = [50.1, 49.8, 52.0, 48.5]
+# for medidas in pecas:
+#     if 48 < medidas >= 50.0:
+#         print(f"Peça com medida {medidas}mm: Aprovada")
+#     else:
+#         print(f"Peça com medida {medidas}mm: Rejeitada")
+# print(f"Fim da avalição de peças")
+
+#Exercício 5 - Uma balança industrial está pesando um lote de 6 sacos de insumos. O peso ideal de cada saco é de 50kg, mas o sistema 
+# aceita variações.
+# Crie um programa  que peça ao usuário o peso de cada saco  (via input dentro do loop) e, para cada um, informe se ele está "Dentro do limite"
+# (entre 48kg e 52kg) ou "Fora dp limite". No final, exiba quantos sacos esta dentro do limite.
+
+
+
+#O Desafio: Gestão de Ciclo Térmico 

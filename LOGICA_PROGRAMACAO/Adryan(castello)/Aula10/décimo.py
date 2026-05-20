@@ -54,12 +54,12 @@
 # print(saudacao("Adryan","16 anos"))
 
 #Exemplo 2
-def calcular_media(num1, num2, num3):
-    try:
-        media = (num1 + num2 + num3) /3
-        return media
-    except TypeError:
-        return "Erro : Todos os valores devem ser números."
-    except ZeroDivisionError:
-     return "Erro: Não é possível dividir por zero."
-print(calcular_media(10, 20,30))
+#def calcular_media(num1, num2, num3):
+#     try:
+#         media = (num1 + num2 + num3) /3
+#         return media
+#     except TypeError:
+#         return "Erro : Todos os valores devem ser números."
+#     except ZeroDivisionError:
+#      return "Erro: Não é possível dividir por zero."
+# print(calcular_media(10, 20,30))

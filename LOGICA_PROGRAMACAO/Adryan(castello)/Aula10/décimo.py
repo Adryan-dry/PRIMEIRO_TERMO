@@ -54,7 +54,7 @@
 # print(saudacao("Adryan","16 anos"))
 
 #Exemplo 2
-#def calcular_media(num1, num2, num3):
+# def calcular_media(num1, num2, num3):
 #     try:
 #         media = (num1 + num2 + num3) /3
 #         return media
@@ -63,3 +63,23 @@
 #     except ZeroDivisionError:
 #      return "Erro: Não é possível dividir por zero."
 # print(calcular_media(10, 20,30))
+
+#Exemplo 3
+#def valores():
+#     print("Digite três valores:")
+#     a = int(input("Digite o primeiro valor:"))
+#     b = int(input("Digite o segundo valor:"))  
+#     c = int(input("Digite o terceiro valor:"))
+#     return a, b, c
+# print(f"O valor maior é: {max(valores())}")
+
+#Exemplo 4
+#Calcule o dobro de um número fornecido pelo usuário, tratando erros de entrada inválida.
+def calcular_dobro():
+   try: 
+      valor_digitado = int(input("Digite o valor que deseja :)"))
+      total_dobro = valor_digitado *2 
+
+   except ValueError:
+      print("Digite um número válido")
+print(f"O resultado do cálculo é: {calcular_dobro()}")

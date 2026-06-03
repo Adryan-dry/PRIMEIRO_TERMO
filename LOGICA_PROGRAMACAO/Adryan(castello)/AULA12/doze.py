@@ -94,7 +94,7 @@ combo_nivel = tk.ttk.Combobox(janela_bemvindo, values=["Brasil", "Marrocos", "Eg
 combo_nivel.grid(row=5, column=2, pady=10, padx=10)
 
 # Botão
-btn_enviar_mensagem = tk.Button(janela_bemvindo, text="Enviar Mensagem", command=bemvindo, bg = "#9E2D11", fg="black", font=("Arial", 8, "bold"), width=10)
+btn_enviar_mensagem = tk.Button(janela_bemvindo, text="Enviar Mensagem", command=bemvindo, bg = "#9E2D11", fg="black", bd= 6, font=("Arial", 8, "bold"), width=10)
 btn_enviar_mensagem.grid(row=7, column=2, pady=10, padx=10)
 btn_segunda_janela = tk.Button(janela_bemvindo, text="Abrir Segunda Janela", command=segunda_janela, bg="#9E2D11", fg="black", font=("Arial", 8, "bold"), width=12)
 btn_segunda_janela.grid(row=7, column=1, pady=10, padx=10)
